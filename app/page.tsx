@@ -137,15 +137,14 @@ export default async function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {categories.map((category) => (
-              <Link
+              <div
                 key={category.name}
-                href={`/search?category=${category.slug}`}
-                className="group relative rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8 text-center hover:border-zinc-300 hover:shadow-lg transition-all duration-200"
+                className="relative rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8 text-center"
               >
-                <h3 className="text-base sm:text-lg font-semibold text-zinc-900 group-hover:text-zinc-900 transition-colors">
+                <h3 className="text-base sm:text-lg font-semibold text-zinc-900">
                   {category.name}
                 </h3>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
