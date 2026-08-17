@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { prisma } from '@/lib/prisma';
 
+// Force dynamic rendering to avoid database queries during build
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   const businesses = await prisma.business.findMany({
     where: {
