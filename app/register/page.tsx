@@ -56,7 +56,9 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-zinc-900 mb-2">Ornek</h1>
+          <Link href="/" className="inline-block">
+            <h1 className="text-4xl font-bold text-zinc-900 mb-2 hover:text-indigo-600 transition-colors">Ornek</h1>
+          </Link>
           <p className="text-zinc-700">Создайте аккаунт для вашего бизнеса</p>
         </div>
 
@@ -189,13 +191,22 @@ export default function RegisterPage() {
             </button>
           </form>
 
-          <div className="mt-6 text-center">
+          <div className="mt-6 text-center space-y-3">
             <p className="text-sm text-zinc-700">
               Уже есть аккаунт?{' '}
               <Link href="/login" className="text-indigo-600 hover:text-indigo-700 font-medium">
                 Войти
               </Link>
             </p>
+            <Link
+              href="/"
+              className="text-sm text-zinc-700 hover:text-zinc-900 font-medium inline-flex items-center gap-1 transition-colors"
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              На главную
+            </Link>
           </div>
         </div>
       </div>
