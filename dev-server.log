@@ -1,0 +1,519 @@
+
+> ornek@0.1.0 dev
+> next dev
+
+▲ Next.js 16.3.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.8.2:3000
+- Environments: .env
+✓ Ready in 5.4s
+✓ Running next.config.ts took 444ms
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead.
+
+  To migrate automatically, run:
+  npx @next/codemod@canary middleware-to-proxy .
+
+  Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+
+ GET / 200 in 6.8s (next.js: 3.7s, application-code: 3.1s)
+ GET / 200 in 212ms (next.js: 37ms, application-code: 176ms)
+ GET / 200 in 174ms (next.js: 14ms, application-code: 160ms)
+ GET / 200 in 328ms (next.js: 8ms, application-code: 319ms)
+ GET / 200 in 596ms (next.js: 26ms, application-code: 570ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:{...}, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="geist_a715...">
+                          <body
+                            className="min-h-full flex flex-col"
+-                           __processed_d9aef135-75cd-46c1-a452-990e18447784__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                            ...
+                              <SegmentViewNode type="page" pagePath="page.tsx">
+                                <SegmentTrieNode>
+                                <Home>
+                                  <div
+                                    className="min-h-screen bg-white"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <header className="sticky top...">
+                                      <div
+                                        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex h-16 items-center justify-between"
+-                                         bis_skin_checked="1"
+                                        >
+                                    <section className="relative p...">
+                                      <div
+                                        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="mx-auto max-w-3xl text-center"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <h1>
+                                          <p>
+                                          <div
+                                            id="search"
+                                            className="mt-10 relative max-w-xl mx-auto"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm ..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="flex items-center gap-1.5"
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="flex items-center gap-1.5"
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="flex items-center gap-1.5"
+-                                             bis_skin_checked="1"
+                                            >
+                                    <section className="py-16 sm:p...">
+                                      <div
+                                        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="text-center mb-12"
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"
+-                                         bis_skin_checked="1"
+                                        >
+                                    <section className="py-16 sm:p...">
+                                      <div
+                                        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="mb-12"
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <LinkComponent>
+                                            <LinkComponent href="/business/..." className="group roun...">
+                                              <a className="group roun..." ref={function} onClick={function onClick} ...>
+                                                <div
+                                                  className="aspect-[16/9] bg-zinc-100 relative overflow-hidden"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="absolute inset-0 flex items-center justify-center"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="absolute top-4 left-4"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                <div
+                                                  className="p-5 sm:p-6"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="flex items-start justify-between mb-3"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="space-y-2 mb-4"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="flex items-center gap-2 text-sm text-zinc-600"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                    <div
+                                                      className="flex items-center gap-2 text-sm text-zinc-600"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                    <div
+                                                      className="flex items-center gap-2 text-sm text-zinc-600"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                  <div
+                                                    className="mb-4 pb-4 border-b border-zinc-100"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <p>
+                                                    <div
+                                                      className="flex flex-wrap gap-1.5"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                  <div
+                                                    className="w-full py-3 px-4 rounded-xl bg-zinc-900 text-white font..."
+-                                                   bis_skin_checked="1"
+                                                  >
++                                                   Записаться
+                                    <section className="py-16 sm:p...">
+                                      <div
+                                        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="rounded-2xl border border-zinc-200 bg-white p-8 sm:p-12 lg:p-16 t..."
+-                                         bis_skin_checked="1"
+                                        >
+                                          <h2>
+                                          <p>
+                                          <div
+                                            className="mt-8"
+-                                           bis_skin_checked="1"
+                                          >
+                                    <footer className="border-t b...">
+                                      <div
+                                        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex flex-col md:flex-row items-center justify-between gap-6"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="flex items-center gap-6"
+-                                           bis_skin_checked="1"
+                                          >
+                                        <div
+                                          className="mt-8 pt-8 border-t border-zinc-200 text-center text-sm text-zinc-500"
+-                                         bis_skin_checked="1"
+                                        >
++                                         © 2026 Ornek. Все права защищены.
+                              ...
+                  ...
+ 
+ GET /register 200 in 266ms (next.js: 54ms, proxy.ts: 119ms, application-code: 94ms)
+ GET /business/cmswbwcvd000198rdmlk2dedq 200 in 2.2s (next.js: 1634ms, application-code: 528ms)
+ GET /business/cmswbwcvd000198rdmlk2dedq 200 in 272ms (next.js: 20ms, application-code: 252ms)
+ GET /business/cmswbwcvd000198rdmlk2dedq/book?serviceId=cmswbwcwz000k98rdlx1gwlfd 200 in 1472ms (next.js: 1429ms, application-code: 44ms)
+ GET /api/businesses/cmswbwcvd000198rdmlk2dedq 200 in 1664ms (next.js: 1573ms, application-code: 91ms)
+ GET /business/cmswbwcvd000198rdmlk2dedq 200 in 623ms (next.js: 24ms, application-code: 599ms)
+ GET / 200 in 292ms (next.js: 13ms, application-code: 279ms)
+ GET /register 200 in 56ms (next.js: 14ms, proxy.ts: 8ms, application-code: 34ms)
+ POST /api/auth/register 400 in 306ms (next.js: 116ms, application-code: 190ms)
+ POST /api/auth/register 200 in 351ms (next.js: 6ms, application-code: 345ms)
+ GET /dashboard 200 in 198ms (next.js: 75ms, proxy.ts: 9ms, application-code: 114ms)
+ GET /api/dashboard/stats 200 in 790ms (next.js: 159ms, application-code: 631ms)
+ GET /api/dashboard/stats 200 in 111ms (next.js: 12ms, application-code: 100ms)
+ GET /dashboard/calendar 200 in 100ms (next.js: 53ms, proxy.ts: 7ms, application-code: 39ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 2.0s (next.js: 1944ms, application-code: 70ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 56ms (next.js: 18ms, application-code: 37ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-17T19%3A00%3A00.000Z 200 in 55ms (next.js: 23ms, application-code: 32ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 47ms (next.js: 12ms, application-code: 35ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 46ms (next.js: 20ms, application-code: 26ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 24ms (next.js: 6ms, application-code: 18ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 23ms (next.js: 5ms, application-code: 18ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-17T19%3A00%3A00.000Z 200 in 34ms (next.js: 5ms, application-code: 29ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-17T19%3A00%3A00.000Z 200 in 37ms (next.js: 15ms, application-code: 22ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-17T19%3A00%3A00.000Z 200 in 29ms (next.js: 8ms, application-code: 22ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 30ms (next.js: 10ms, application-code: 20ms)
+ GET /dashboard/appointments 200 in 164ms (next.js: 83ms, proxy.ts: 14ms, application-code: 67ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 60ms (next.js: 10ms, application-code: 50ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 136ms (next.js: 65ms, application-code: 71ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=CONFIRMED&staffId=&dateFrom=&dateTo= 200 in 35ms (next.js: 14ms, application-code: 21ms)
+ GET /dashboard/customers 200 in 114ms (next.js: 66ms, proxy.ts: 8ms, application-code: 39ms)
+ GET /api/dashboard/customers 200 in 140ms (next.js: 105ms, application-code: 35ms)
+ GET /api/dashboard/customers 200 in 27ms (next.js: 5ms, application-code: 23ms)
+ GET /dashboard/services 200 in 124ms (next.js: 50ms, proxy.ts: 6ms, application-code: 68ms)
+ GET /api/dashboard/services 200 in 183ms (next.js: 151ms, application-code: 31ms)
+ GET /api/dashboard/services 200 in 32ms (next.js: 5ms, application-code: 27ms)
+ GET /dashboard/appointments 200 in 53ms (next.js: 12ms, proxy.ts: 8ms, application-code: 33ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 46ms (next.js: 25ms, application-code: 21ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 44ms (next.js: 9ms, application-code: 35ms)
+ GET /dashboard/services 200 in 58ms (next.js: 11ms, proxy.ts: 10ms, application-code: 37ms)
+ GET /api/dashboard/services 200 in 42ms (next.js: 16ms, application-code: 27ms)
+ GET /api/dashboard/services 200 in 38ms (next.js: 7ms, application-code: 31ms)
+ GET /dashboard/staff 200 in 93ms (next.js: 47ms, proxy.ts: 7ms, application-code: 39ms)
+ GET /api/dashboard/staff 200 in 137ms (next.js: 93ms, application-code: 44ms)
+ GET /api/dashboard/staff 200 in 46ms (next.js: 8ms, application-code: 38ms)
+ GET /dashboard/services 200 in 48ms (next.js: 11ms, proxy.ts: 9ms, application-code: 28ms)
+ GET /api/dashboard/services 200 in 42ms (next.js: 11ms, application-code: 31ms)
+ GET /api/dashboard/services 200 in 33ms (next.js: 5ms, application-code: 28ms)
+ GET /dashboard/staff 200 in 53ms (next.js: 12ms, proxy.ts: 7ms, application-code: 34ms)
+ GET /api/dashboard/staff 200 in 78ms (next.js: 26ms, application-code: 51ms)
+ GET /api/dashboard/staff 200 in 62ms (next.js: 13ms, application-code: 48ms)
+ GET /dashboard/customers 200 in 57ms (next.js: 12ms, proxy.ts: 11ms, application-code: 34ms)
+ GET /api/dashboard/customers 200 in 38ms (next.js: 12ms, application-code: 26ms)
+ GET /api/dashboard/customers 200 in 49ms (next.js: 8ms, application-code: 41ms)
+ GET /dashboard/appointments 200 in 65ms (next.js: 13ms, proxy.ts: 12ms, application-code: 39ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 214ms (next.js: 29ms, application-code: 185ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 75ms (next.js: 17ms, application-code: 58ms)
+ GET /dashboard 200 in 100ms (next.js: 18ms, proxy.ts: 11ms, application-code: 71ms)
+ GET /dashboard/appointments 200 in 183ms (next.js: 46ms, proxy.ts: 9ms, application-code: 128ms)
+ GET /api/dashboard/stats 200 in 771ms (next.js: 16ms, application-code: 755ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 125ms (next.js: 49ms, application-code: 77ms)
+ GET /api/dashboard/stats 200 in 237ms (next.js: 77ms, application-code: 160ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 68ms (next.js: 15ms, application-code: 54ms)
+ GET /dashboard/appointments 200 in 608ms (next.js: 12ms, proxy.ts: 16ms, application-code: 581ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/dashboard..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:{...}, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="geist_a715...">
+                          <body
+                            className="min-h-full flex flex-col"
+-                           __processed_156aeea6-eaef-499f-8bff-f7d39e25bf4a__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                            ...
+                              <script>
+                              <ClientSegmentRoot Component={function DashboardLayout} slots={{children:{...}}} ...>
+                                <DashboardLayout params={Promise}>
+                                  <div
+                                    className="h-screen flex overflow-hidden bg-zinc-50"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-zinc-200 tr..."
+-                                     bis_skin_checked="1"
+                                    >
+                                      <SidebarContent navigation={[...]} pathname="/dashboard...">
+                                        <div
+                                          className="flex h-16 flex-shrink-0 items-center px-6 border-b border-zinc-200"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex items-center gap-2"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-600 to-purpl..."
+-                                             bis_skin_checked="1"
+                                            >
+                                            ...
+                                        <nav>
+                                        <div
+                                          className="flex-shrink-0 border-t border-zinc-200 p-4"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex items-center gap-3"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="h-10 w-10 rounded-full bg-gradient-to-br from-indigo-500 to-p..."
+-                                             bis_skin_checked="1"
+                                            >
++                                             ОБ
+                                            <div
+                                              className="flex-1 min-w-0"
+-                                             bis_skin_checked="1"
+                                            >
+                                    <div
+                                      className="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="flex-1 flex flex-col min-h-0 bg-white border-r border-zinc-200"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <SidebarContent navigation={[...]} pathname="/dashboard...">
+                                          <div
+                                            className="flex h-16 flex-shrink-0 items-center px-6 border-b border-zinc-200"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="flex items-center gap-2"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-600 to-pur..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              ...
+                                          <nav>
+                                          <div
+                                            className="flex-shrink-0 border-t border-zinc-200 p-4"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="flex items-center gap-3"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="h-10 w-10 rounded-full bg-gradient-to-br from-indigo-500 to..."
+-                                               bis_skin_checked="1"
+                                              >
++                                               ОБ
+                                              <div
+                                                className="flex-1 min-w-0"
+-                                               bis_skin_checked="1"
+                                              >
+                                    <div
+                                      className="flex-1 flex flex-col lg:pl-64"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-white border-b border-..."
+-                                       bis_skin_checked="1"
+                                      >
+                                        <button>
+                                        <div
+                                          className="flex flex-1 justify-between px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex flex-1 items-center"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="flex items-center gap-4"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <button>
+                                            <div
+                                              className="h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-pur..."
+-                                             bis_skin_checked="1"
+                                            >
++                                             ОБ
+                                      ...
+                                        <SegmentViewNode type="page" pagePath="dashboard/...">
+                                          <SegmentTrieNode>
+                                          <ClientPageRoot Component={function AppointmentsPage} ...>
+                                            <AppointmentsPage params={Promise} searchParams={Promise}>
+                                              <div
+                                                className="flex items-center justify-center h-full"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="animate-spin rounded-full h-12 w-12 border-b-2 border-ind..."
+-                                                 bis_skin_checked="1"
+                                                >
+                  ...
+ 
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 97ms (next.js: 8ms, application-code: 89ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 44ms (next.js: 13ms, application-code: 31ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 337ms (next.js: 15ms, application-code: 322ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 42ms (next.js: 6ms, application-code: 37ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 76ms (next.js: 8ms, application-code: 67ms)
+ GET /dashboard/calendar 200 in 113ms (next.js: 11ms, proxy.ts: 11ms, application-code: 92ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 68ms (next.js: 12ms, application-code: 56ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 46ms (next.js: 8ms, application-code: 38ms)
+ GET /dashboard/staff 200 in 90ms (next.js: 13ms, proxy.ts: 11ms, application-code: 66ms)
+ GET /api/dashboard/staff 200 in 84ms (next.js: 20ms, application-code: 64ms)
+ GET /api/dashboard/staff 200 in 63ms (next.js: 13ms, application-code: 50ms)
+ GET /dashboard/staff 200 in 50ms (next.js: 10ms, proxy.ts: 10ms, application-code: 29ms)
+ GET /dashboard/settings 200 in 295ms (next.js: 206ms, proxy.ts: 7ms, application-code: 81ms)
+ GET /api/dashboard/settings 200 in 616ms (next.js: 534ms, application-code: 82ms)
+ GET /api/dashboard/settings 200 in 35ms (next.js: 14ms, application-code: 21ms)
+ GET /dashboard/staff 200 in 135ms (next.js: 21ms, proxy.ts: 12ms, application-code: 102ms)
+ GET /api/dashboard/staff 200 in 64ms (next.js: 13ms, application-code: 51ms)
+ GET /api/dashboard/staff 200 in 65ms (next.js: 15ms, application-code: 51ms)
+ GET /dashboard/calendar 200 in 113ms (next.js: 21ms, proxy.ts: 28ms, application-code: 63ms)
+ GET /dashboard 200 in 83ms (next.js: 18ms, proxy.ts: 12ms, application-code: 53ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 264ms (next.js: 30ms, application-code: 234ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 95ms (next.js: 31ms, application-code: 63ms)
+ GET /api/dashboard/stats 200 in 491ms (next.js: 60ms, application-code: 432ms)
+ GET /api/dashboard/stats 200 in 84ms (next.js: 10ms, application-code: 74ms)
+ GET /dashboard 200 in 49ms (next.js: 10ms, proxy.ts: 8ms, application-code: 31ms)
+ GET /dashboard/calendar 200 in 59ms (next.js: 12ms, proxy.ts: 6ms, application-code: 42ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 70ms (next.js: 23ms, application-code: 47ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 53ms (next.js: 7ms, application-code: 46ms)
+ GET /dashboard/staff 200 in 75ms (next.js: 15ms, proxy.ts: 7ms, application-code: 53ms)
+ GET /api/dashboard/staff 200 in 58ms (next.js: 14ms, application-code: 44ms)
+ GET /api/dashboard/staff 200 in 47ms (next.js: 5ms, application-code: 42ms)
+ GET /dashboard/services 200 in 86ms (next.js: 18ms, proxy.ts: 6ms, application-code: 61ms)
+ GET /api/dashboard/services 200 in 58ms (next.js: 11ms, application-code: 48ms)
+ GET /api/dashboard/services 200 in 58ms (next.js: 14ms, application-code: 44ms)
+ GET /dashboard/appointments 200 in 60ms (next.js: 10ms, proxy.ts: 6ms, application-code: 43ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 69ms (next.js: 41ms, application-code: 28ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?status=&staffId=&dateFrom=&dateTo= 200 in 41ms (next.js: 10ms, application-code: 31ms)
+ GET /dashboard/calendar 200 in 139ms (next.js: 20ms, proxy.ts: 9ms, application-code: 110ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 36ms (next.js: 8ms, application-code: 28ms)
+ GET /api/businesses/cmsvo9smi0001ggrde90s8cii/appointments?dateFrom=2026-08-16T19%3A00%3A00.000Z&dateTo=2026-08-23T19%3A00%3A00.000Z 200 in 34ms (next.js: 8ms, application-code: 27ms)
+ GET /dashboard 200 in 82ms (next.js: 17ms, proxy.ts: 12ms, application-code: 53ms)
+ GET /api/dashboard/stats 200 in 73ms (next.js: 16ms, application-code: 57ms)
+ GET /api/dashboard/stats 200 in 90ms (next.js: 17ms, application-code: 72ms)
+ GET /dashboard 200 in 412ms (next.js: 110ms, proxy.ts: 160ms, application-code: 142ms)
+✓ Compiled in 1766ms
+ GET /dashboard 200 in 107ms (next.js: 38ms, proxy.ts: 11ms, application-code: 58ms)
+✓ Compiled in 1253ms
+ GET /dashboard 200 in 80ms (next.js: 20ms, proxy.ts: 12ms, application-code: 48ms)
+ GET /dashboard 200 in 240ms (next.js: 72ms, proxy.ts: 10ms, application-code: 158ms)
+ GET /dashboard 200 in 208ms (next.js: 53ms, proxy.ts: 56ms, application-code: 99ms)
+✓ Compiled in 759ms
+ GET /dashboard 200 in 61ms (next.js: 13ms, proxy.ts: 9ms, application-code: 39ms)
+ GET /dashboard 200 in 71ms (next.js: 13ms, proxy.ts: 8ms, application-code: 50ms)
+ GET /dashboard 200 in 85ms (next.js: 14ms, proxy.ts: 8ms, application-code: 63ms)
+ GET /dashboard 200 in 95ms (next.js: 8ms, proxy.ts: 8ms, application-code: 79ms)
+✓ Compiled in 595ms
+ GET /dashboard 200 in 58ms (next.js: 13ms, proxy.ts: 10ms, application-code: 35ms)
+ GET /dashboard 200 in 70ms (next.js: 16ms, proxy.ts: 13ms, application-code: 41ms)
+✓ Compiled in 210ms
