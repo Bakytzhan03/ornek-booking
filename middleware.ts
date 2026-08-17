@@ -1,34 +1,26 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { getIronSession } from 'iron-session';
-import { sessionOptions, SessionData } from './lib/session';
+
+// Простая проверка cookie вместо getIronSession в Edge Runtime
+function isAuthenticated(request: NextRequest): boolean {
+  const sessionCookie = request.cookies.get('ornek_session');
+  return !!sessionCookie?.value;
+}
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Protect dashboard routes
   if (pathname.startsWith('/dashboard')) {
-    const response = NextResponse.next();
-    const session = await getIronSession<SessionData>(request, response, sessionOptions);
-
-    if (!session.isLoggedIn) {
+    if (!isAuthenticated(request)) {
       return NextResponse.redirect(new URL('/login', request.url));
     }
-
-    // Pass businessId to request headers for API routes
-    response.headers.set('x-business-id', session.businessId);
-    response.headers.set('x-user-id', session.userId);
-    response.headers.set('x-user-role', session.role);
-
-    return response;
+    return NextResponse.next();
   }
 
   // Redirect logged-in users from login/register to dashboard
   if (pathname === '/login' || pathname === '/register') {
-    const response = NextResponse.next();
-    const session = await getIronSession<SessionData>(request, response, sessionOptions);
-
-    if (session.isLoggedIn) {
+    if (isAuthenticated(request)) {
       return NextResponse.redirect(new URL('/dashboard', request.url));
     }
   }
