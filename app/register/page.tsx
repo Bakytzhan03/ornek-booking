@@ -53,17 +53,17 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center p-4 py-8">
       <div className="w-full max-w-md">
-        <div className="text-center mb-8">
+        <div className="text-center mb-6 sm:mb-8">
           <Link href="/" className="inline-block">
-            <h1 className="text-4xl font-bold text-zinc-900 mb-2 hover:text-indigo-600 transition-colors">Ornek</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-2 hover:text-indigo-600 transition-colors">Ornek</h1>
           </Link>
-          <p className="text-zinc-700">Создайте аккаунт для вашего бизнеса</p>
+          <p className="text-sm sm:text-base text-zinc-700">Создайте аккаунт для вашего бизнеса</p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-xl p-8">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
+          <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
             {error && (
               <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
                 {error}
@@ -81,7 +81,7 @@ export default function RegisterPage() {
                   value={formData.firstName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500"
+                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500 text-base"
                   placeholder="Ваше имя"
                 />
               </div>
@@ -96,7 +96,7 @@ export default function RegisterPage() {
                   value={formData.lastName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500"
+                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500 text-base"
                   placeholder="Ваша фамилия"
                 />
               </div>
@@ -111,7 +111,7 @@ export default function RegisterPage() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500"
+                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500 text-base"
                   placeholder="your@email.com"
                 />
               </div>
@@ -127,7 +127,7 @@ export default function RegisterPage() {
                   onChange={handleChange}
                   required
                   minLength={6}
-                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500"
+                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500 text-base"
                   placeholder="Минимум 6 символов"
                 />
               </div>
@@ -146,7 +146,7 @@ export default function RegisterPage() {
                       value={formData.businessName}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500"
+                      className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500 text-base"
                       placeholder="Например: Barbershop Premium"
                     />
                   </div>
@@ -160,7 +160,7 @@ export default function RegisterPage() {
                       name="businessCity"
                       value={formData.businessCity}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500"
+                      className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500 text-base"
                       placeholder="Алматы"
                     />
                   </div>
@@ -174,7 +174,7 @@ export default function RegisterPage() {
                       name="businessAddress"
                       value={formData.businessAddress}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500"
+                      className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500 text-base"
                       placeholder="ул. Абая, 150"
                     />
                   </div>
@@ -185,13 +185,13 @@ export default function RegisterPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-indigo-600 text-white py-3 rounded-lg font-medium hover:bg-indigo-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-indigo-600 text-white py-3 rounded-lg font-medium hover:bg-indigo-700 transition disabled:opacity-50 disabled:cursor-not-allowed active:scale-95 text-base"
             >
               {loading ? 'Создание аккаунта...' : 'Зарегистрироваться'}
             </button>
           </form>
 
-          <div className="mt-6 text-center space-y-3">
+          <div className="mt-5 sm:mt-6 text-center space-y-3">
             <p className="text-sm text-zinc-700">
               Уже есть аккаунт?{' '}
               <Link href="/login" className="text-indigo-600 hover:text-indigo-700 font-medium">

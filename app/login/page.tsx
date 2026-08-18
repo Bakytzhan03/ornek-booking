@@ -50,15 +50,15 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
-        <div className="text-center mb-8">
+        <div className="text-center mb-6 sm:mb-8">
           <Link href="/" className="inline-block">
-            <h1 className="text-4xl font-bold text-zinc-900 mb-2 hover:text-indigo-600 transition-colors">Ornek</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-2 hover:text-indigo-600 transition-colors">Ornek</h1>
           </Link>
-          <p className="text-zinc-700">Войдите в ваш аккаунт</p>
+          <p className="text-sm sm:text-base text-zinc-700">Войдите в ваш аккаунт</p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-xl p-8">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
+          <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
             {error && (
               <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
                 {error}
@@ -75,7 +75,7 @@ export default function LoginPage() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500"
+                className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500 text-base"
                 placeholder="your@email.com"
               />
             </div>
@@ -90,7 +90,7 @@ export default function LoginPage() {
                 value={formData.password}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500"
+                className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-zinc-900 placeholder:text-zinc-500 text-base"
                 placeholder="Введите пароль"
               />
             </div>
@@ -98,13 +98,13 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-indigo-600 text-white py-3 rounded-lg font-medium hover:bg-indigo-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-indigo-600 text-white py-3 rounded-lg font-medium hover:bg-indigo-700 transition disabled:opacity-50 disabled:cursor-not-allowed active:scale-95 text-base"
             >
               {loading ? 'Вход...' : 'Войти'}
             </button>
           </form>
 
-          <div className="mt-6 text-center space-y-3">
+          <div className="mt-5 sm:mt-6 text-center space-y-3">
             <p className="text-sm text-zinc-700">
               Нет аккаунта?{' '}
               <Link href="/register" className="text-indigo-600 hover:text-indigo-700 font-medium">
@@ -122,7 +122,7 @@ export default function LoginPage() {
             </Link>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-zinc-200">
+          <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-zinc-200">
             <p className="text-xs text-zinc-700 text-center">
               Демо аккаунт: owner@barbershop.kz / password123
             </p>

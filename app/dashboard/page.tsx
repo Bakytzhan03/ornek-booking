@@ -60,16 +60,16 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="p-6 lg:p-8 space-y-8">
+    <div className="p-4 sm:p-6 lg:p-8 space-y-6 sm:space-y-8">
       <div>
-        <h1 className="text-2xl font-bold text-zinc-900">Обзор</h1>
+        <h1 className="text-xl sm:text-2xl font-bold text-zinc-900">Обзор</h1>
         <p className="mt-1 text-sm text-zinc-700">
           Добро пожаловать в панель управления Ornek
         </p>
       </div>
 
       {/* Stats Grid */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:gap-6 grid-cols-2 lg:grid-cols-4">
         <StatCard
           title="Записи сегодня"
           value={stats.todayAppointments}
@@ -99,34 +99,34 @@ export default function DashboardPage() {
       </div>
 
       {/* Additional Stats */}
-      <div className="grid gap-6 sm:grid-cols-2">
-        <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-zinc-900/5">
+      <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
+        <div className="rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-zinc-900/5">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-medium text-zinc-700">Услуги</h3>
             <Link
               href="/dashboard/services"
-              className="text-sm text-indigo-600 hover:text-indigo-700 font-medium"
+              className="text-xs sm:text-sm text-indigo-600 hover:text-indigo-700 font-medium whitespace-nowrap"
             >
               Управление →
             </Link>
           </div>
-          <p className="mt-2 text-3xl font-bold text-zinc-900">
+          <p className="mt-2 text-2xl sm:text-3xl font-bold text-zinc-900">
             {stats.totalServices}
           </p>
           <p className="mt-1 text-sm text-zinc-700">Активных услуг</p>
         </div>
 
-        <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-zinc-900/5">
+        <div className="rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-zinc-900/5">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-medium text-zinc-700">Сотрудники</h3>
             <Link
               href="/dashboard/staff"
-              className="text-sm text-indigo-600 hover:text-indigo-700 font-medium"
+              className="text-xs sm:text-sm text-indigo-600 hover:text-indigo-700 font-medium whitespace-nowrap"
             >
               Управление →
             </Link>
           </div>
-          <p className="mt-2 text-3xl font-bold text-zinc-900">
+          <p className="mt-2 text-2xl sm:text-3xl font-bold text-zinc-900">
             {stats.totalStaff}
           </p>
           <p className="mt-1 text-sm text-zinc-700">Активных мастеров</p>
@@ -134,14 +134,14 @@ export default function DashboardPage() {
       </div>
 
       {/* Upcoming Appointments */}
-      <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-zinc-900/5">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-lg font-semibold text-zinc-900">
+      <div className="rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-zinc-900/5">
+        <div className="flex items-center justify-between mb-4 sm:mb-6">
+          <h2 className="text-base sm:text-lg font-semibold text-zinc-900">
             Ближайшие записи
           </h2>
           <Link
             href="/dashboard/appointments"
-            className="text-sm text-indigo-600 hover:text-indigo-700 font-medium"
+            className="text-xs sm:text-sm text-indigo-600 hover:text-indigo-700 font-medium whitespace-nowrap"
           >
             Смотреть все →
           </Link>
@@ -162,36 +162,36 @@ export default function DashboardPage() {
       </div>
 
       {/* Quick Actions */}
-      <div className="grid gap-6 sm:grid-cols-3">
+      <div className="grid gap-4 sm:gap-6 sm:grid-cols-3">
         <Link
           href="/dashboard/calendar"
-          className="group rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 p-6 text-white shadow-lg hover:shadow-xl transition"
+          className="group rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 p-5 sm:p-6 text-white shadow-lg hover:shadow-xl transition active:scale-95"
         >
-          <CalendarIcon className="h-8 w-8 mb-3 opacity-90" />
-          <h3 className="text-lg font-semibold">Календарь</h3>
-          <p className="mt-1 text-sm text-indigo-100">
+          <CalendarIcon className="h-7 w-7 sm:h-8 sm:w-8 mb-2 sm:mb-3 opacity-90" />
+          <h3 className="text-base sm:text-lg font-semibold">Календарь</h3>
+          <p className="mt-1 text-xs sm:text-sm text-indigo-100">
             Просмотр расписания
           </p>
         </Link>
 
         <Link
           href="/dashboard/appointments"
-          className="group rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 p-6 text-white shadow-lg hover:shadow-xl transition"
+          className="group rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 p-5 sm:p-6 text-white shadow-lg hover:shadow-xl transition active:scale-95"
         >
-          <ClipboardIcon className="h-8 w-8 mb-3 opacity-90" />
-          <h3 className="text-lg font-semibold">Записи</h3>
-          <p className="mt-1 text-sm text-purple-100">
+          <ClipboardIcon className="h-7 w-7 sm:h-8 sm:w-8 mb-2 sm:mb-3 opacity-90" />
+          <h3 className="text-base sm:text-lg font-semibold">Записи</h3>
+          <p className="mt-1 text-xs sm:text-sm text-purple-100">
             Управление записями
           </p>
         </Link>
 
         <Link
           href="/dashboard/customers"
-          className="group rounded-xl bg-gradient-to-br from-pink-500 to-pink-600 p-6 text-white shadow-lg hover:shadow-xl transition"
+          className="group rounded-xl bg-gradient-to-br from-pink-500 to-pink-600 p-5 sm:p-6 text-white shadow-lg hover:shadow-xl transition active:scale-95"
         >
-          <UsersIcon className="h-8 w-8 mb-3 opacity-90" />
-          <h3 className="text-lg font-semibold">Клиенты</h3>
-          <p className="mt-1 text-sm text-pink-100">
+          <UsersIcon className="h-7 w-7 sm:h-8 sm:w-8 mb-2 sm:mb-3 opacity-90" />
+          <h3 className="text-base sm:text-lg font-semibold">Клиенты</h3>
+          <p className="mt-1 text-xs sm:text-sm text-pink-100">
             База клиентов
           </p>
         </Link>
@@ -214,17 +214,17 @@ function StatCard({
   trendUp?: boolean;
 }) {
   return (
-    <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-zinc-900/5">
+    <div className="rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-zinc-900/5">
       <div className="flex items-center justify-between">
-        <h3 className="text-sm font-medium text-zinc-700">{title}</h3>
-        <div className="rounded-lg bg-indigo-50 p-2 text-indigo-600">
+        <h3 className="text-xs sm:text-sm font-medium text-zinc-700 truncate">{title}</h3>
+        <div className="rounded-lg bg-indigo-50 p-1.5 sm:p-2 text-indigo-600 flex-shrink-0">
           {icon}
         </div>
       </div>
-      <div className="mt-4">
-        <p className="text-3xl font-bold text-zinc-900">{value}</p>
+      <div className="mt-3 sm:mt-4">
+        <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-zinc-900 truncate">{value}</p>
         {trend && (
-          <p className={`mt-2 text-sm font-medium ${trendUp ? 'text-green-600' : 'text-red-600'}`}>
+          <p className={`mt-1.5 sm:mt-2 text-xs sm:text-sm font-medium ${trendUp ? 'text-green-600' : 'text-red-600'}`}>
             {trend} от прошлой недели
           </p>
         )}
@@ -252,9 +252,9 @@ function AppointmentRow({ appointment }: { appointment: any }) {
   };
 
   return (
-    <div className="flex items-center gap-4 rounded-lg border border-zinc-200 p-4 hover:bg-zinc-50 transition">
+    <div className="flex items-center gap-3 sm:gap-4 rounded-lg border border-zinc-200 p-3 sm:p-4 hover:bg-zinc-50 transition">
       <div className="flex-shrink-0 text-center">
-        <div className="text-2xl font-bold text-zinc-900">
+        <div className="text-xl sm:text-2xl font-bold text-zinc-900">
           {startTime.getDate()}
         </div>
         <div className="text-xs text-zinc-700">
@@ -262,27 +262,27 @@ function AppointmentRow({ appointment }: { appointment: any }) {
         </div>
       </div>
 
-      <div className="h-12 w-px bg-zinc-200" />
+      <div className="h-10 sm:h-12 w-px bg-zinc-200" />
 
       <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-2">
-          <p className="font-medium text-zinc-900 truncate">
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+          <p className="font-medium text-sm sm:text-base text-zinc-900 truncate">
             {appointment.customer.firstName} {appointment.customer.lastName}
           </p>
           <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${statusColors[appointment.status]}`}>
             {statusLabels[appointment.status]}
           </span>
         </div>
-        <p className="text-sm text-zinc-700">
+        <p className="text-xs sm:text-sm text-zinc-700 truncate">
           {appointment.service.name} • {appointment.staff.user.firstName} {appointment.staff.user.lastName}
         </p>
       </div>
 
       <div className="flex-shrink-0 text-right">
-        <p className="text-sm font-medium text-zinc-900">
+        <p className="text-xs sm:text-sm font-medium text-zinc-900 whitespace-nowrap">
           {startTime.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })}
         </p>
-        <p className="text-sm text-zinc-700">
+        <p className="text-xs sm:text-sm text-zinc-700 hidden sm:block">
           {appointment.service.duration} мин
         </p>
       </div>

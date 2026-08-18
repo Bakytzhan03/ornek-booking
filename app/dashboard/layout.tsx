@@ -34,11 +34,11 @@ export default function DashboardLayout({
 
       {/* Mobile sidebar */}
       <div
-        className={`fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-zinc-200 transform transition-transform duration-300 ease-in-out lg:hidden ${
+        className={`fixed inset-y-0 left-0 z-50 w-72 sm:w-80 bg-white border-r border-zinc-200 transform transition-transform duration-300 ease-in-out lg:hidden ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <SidebarContent navigation={navigation} pathname={pathname} />
+        <SidebarContent navigation={navigation} pathname={pathname} onClose={() => setSidebarOpen(false)} />
       </div>
 
       {/* Desktop sidebar */}
@@ -51,26 +51,26 @@ export default function DashboardLayout({
       {/* Main content */}
       <div className="flex-1 flex flex-col lg:pl-64">
         {/* Top bar */}
-        <div className="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-white border-b border-zinc-200">
+        <div className="sticky top-0 z-10 flex h-14 sm:h-16 flex-shrink-0 bg-white border-b border-zinc-200">
           <button
             type="button"
-            className="px-4 text-zinc-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 lg:hidden"
+            className="px-3 sm:px-4 text-zinc-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 lg:hidden active:bg-zinc-50"
             onClick={() => setSidebarOpen(true)}
           >
             <span className="sr-only">Open sidebar</span>
             <MenuIcon className="h-6 w-6" />
           </button>
-          <div className="flex flex-1 justify-between px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-1 justify-between px-3 sm:px-4 lg:px-8">
             <div className="flex flex-1 items-center">
-              <h1 className="text-lg font-semibold text-zinc-900">
+              <h1 className="text-base sm:text-lg font-semibold text-zinc-900 truncate">
                 Ornek Dashboard
               </h1>
             </div>
-            <div className="flex items-center gap-4">
-              <button className="text-zinc-700 hover:text-zinc-900">
-                <BellIcon className="h-6 w-6" />
+            <div className="flex items-center gap-2 sm:gap-4">
+              <button className="text-zinc-700 hover:text-zinc-900 p-2 -m-2 active:bg-zinc-50 rounded-lg">
+                <BellIcon className="h-5 w-5 sm:h-6 sm:w-6" />
               </button>
-              <div className="h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-sm font-semibold">
+              <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-xs sm:text-sm font-semibold flex-shrink-0">
                 ОБ
               </div>
             </div>
@@ -89,21 +89,33 @@ export default function DashboardLayout({
 function SidebarContent({
   navigation,
   pathname,
+  onClose,
 }: {
   navigation: any[];
   pathname: string;
+  onClose?: () => void;
 }) {
   return (
     <>
-      <div className="flex h-16 flex-shrink-0 items-center px-6 border-b border-zinc-200">
+      <div className="flex h-14 sm:h-16 flex-shrink-0 items-center justify-between px-4 sm:px-6 border-b border-zinc-200">
         <div className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center">
             <span className="text-white font-bold text-sm">O</span>
           </div>
-          <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <span className="text-lg sm:text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             Ornek
           </span>
         </div>
+        {onClose && (
+          <button
+            onClick={onClose}
+            className="lg:hidden p-2 -m-2 text-zinc-500 hover:text-zinc-700 active:bg-zinc-50 rounded-lg"
+          >
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        )}
       </div>
       <nav className="flex-1 space-y-1 px-3 py-4 overflow-y-auto">
         {navigation.map((item) => {
@@ -112,10 +124,11 @@ function SidebarContent({
             <Link
               key={item.name}
               href={item.href}
-              className={`group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition ${
+              onClick={onClose}
+              className={`group flex items-center gap-3 rounded-lg px-3 py-2.5 sm:py-2 text-sm font-medium transition active:scale-95 ${
                 isActive
                   ? 'bg-indigo-50 text-indigo-600'
-                  : 'text-zinc-700 hover:bg-zinc-50 hover:text-zinc-900'
+                  : 'text-zinc-700 hover:bg-zinc-50 hover:text-zinc-900 active:bg-zinc-100'
               }`}
             >
               <item.icon
@@ -130,7 +143,7 @@ function SidebarContent({
       </nav>
       <div className="flex-shrink-0 border-t border-zinc-200 p-4">
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-sm font-semibold">
+          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-sm font-semibold flex-shrink-0">
             ОБ
           </div>
           <div className="flex-1 min-w-0">
